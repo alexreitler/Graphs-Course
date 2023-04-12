@@ -1,0 +1,253 @@
+\doxysection{repo.\+Graph Class Reference}
+\label{classrepo_1_1_graph}\index{repo.Graph@{repo.Graph}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classrepo_1_1_graph_a121509cebccb1f8afda467c843a663bb}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \textbf{ file\+\_\+read\+\_\+original} (self, file)
+\item 
+def \textbf{ file\+\_\+read\+\_\+new} (self, file)
+\item 
+def \textbf{ file\+\_\+write} (self, file)
+\item 
+def \textbf{ count\+\_\+vertices} (self)
+\item 
+def \textbf{ count\+\_\+edges} (self)
+\item 
+def \textbf{ list\+\_\+isolated\+\_\+vert} (self)
+\item 
+def \textbf{ list\+\_\+in\+\_\+vert} (self, vertex)
+\item 
+def \textbf{ list\+\_\+out\+\_\+vert} (self, vertex)
+\item 
+def \textbf{ add\+\_\+vertex} (self, vertex)
+\item 
+def \textbf{ check\+\_\+vertex} (self, vertex)
+\item 
+def \textbf{ delete\+\_\+vertex} (self, vertex)
+\item 
+def \textbf{ check\+\_\+cost} (self, vertex1, vertex2)
+\item 
+def \textbf{ add\+\_\+cost} (self, vertex1, vertex2, cost)
+\item 
+def \textbf{ delete\+\_\+cost} (self, vertex1, vertex2)
+\item 
+def \textbf{ check\+\_\+edge} (self, vertex1, vertex2)
+\item 
+def \textbf{ add\+\_\+edge} (self, vertex1, vertex2)
+\item 
+def \textbf{ delete\+\_\+edge} (self, vertex1, vertex2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classrepo_1_1_graph_aa246ffb6724b6bcd35653a679a41e484}} 
+{\bfseries Din}
+\item 
+\mbox{\label{classrepo_1_1_graph_a27ff95d5c3ba85070db1634f125e7942}} 
+{\bfseries Dout}
+\item 
+\mbox{\label{classrepo_1_1_graph_afe1f01fc0a6db0901ba2de158d2e87fd}} 
+{\bfseries Dcost}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Implementation of the Graph.
+Uses three dictionaries for storing values.
+Din and Dout have all existing vertices as keys, and a corresponding list of inbound / outbound vertices as values
+Dcost has a pairs of two vertices as keys, and integers as values
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{classrepo_1_1_graph_a12da0a94686c76c24865856725508d49}} 
+\index{repo.Graph@{repo.Graph}!add\_cost@{add\_cost}}
+\index{add\_cost@{add\_cost}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{add\_cost()}
+{\footnotesize\ttfamily def repo.\+Graph.\+add\+\_\+cost (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex1,  }\item[{}]{vertex2,  }\item[{}]{cost }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function add a cost to an edge
+Checks if edge exists
+:param vertex1: integer
+:param vertex2: integer
+:param cost: integer
+:return: RepositoryException if edge doesn't exist
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_af6b9d10a0f36d17001a7100a6c80c012}} 
+\index{repo.Graph@{repo.Graph}!add\_edge@{add\_edge}}
+\index{add\_edge@{add\_edge}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{add\_edge()}
+{\footnotesize\ttfamily def repo.\+Graph.\+add\+\_\+edge (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex1,  }\item[{}]{vertex2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function adds an edge to the graph
+Checks if edge already exists
+:param vertex1: integer
+:param vertex2: integer
+:return: nothing
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_a9331cc127dfe6ab56940e85eece558a3}} 
+\index{repo.Graph@{repo.Graph}!add\_vertex@{add\_vertex}}
+\index{add\_vertex@{add\_vertex}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{add\_vertex()}
+{\footnotesize\ttfamily def repo.\+Graph.\+add\+\_\+vertex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds a vertex to the Graph
+Checks if vertex already exists
+:param vertex: integer
+:return: RepositoryException if vertex exists
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_aa16d34cd6d42002a01fa175da74fa4a5}} 
+\index{repo.Graph@{repo.Graph}!check\_cost@{check\_cost}}
+\index{check\_cost@{check\_cost}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{check\_cost()}
+{\footnotesize\ttfamily def repo.\+Graph.\+check\+\_\+cost (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex1,  }\item[{}]{vertex2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function return the cost of an edge
+:param vertex1: integer
+:param vertex2: integer
+:return: integer
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_a8463df044790f386d976a68770dc0152}} 
+\index{repo.Graph@{repo.Graph}!check\_edge@{check\_edge}}
+\index{check\_edge@{check\_edge}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{check\_edge()}
+{\footnotesize\ttfamily def repo.\+Graph.\+check\+\_\+edge (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex1,  }\item[{}]{vertex2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function checks if an edge exists
+:param vertex1: integer
+:param vertex2: integer
+:return: boolean
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_a01962b3687a5e99f68b67cc0f980307a}} 
+\index{repo.Graph@{repo.Graph}!check\_vertex@{check\_vertex}}
+\index{check\_vertex@{check\_vertex}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{check\_vertex()}
+{\footnotesize\ttfamily def repo.\+Graph.\+check\+\_\+vertex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks if vertex already exists
+:param vertex: integer
+:return: RepositoryException if vertex exists
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_ab95e57399deb7ee3e96f254a4de623db}} 
+\index{repo.Graph@{repo.Graph}!count\_edges@{count\_edges}}
+\index{count\_edges@{count\_edges}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{count\_edges()}
+{\footnotesize\ttfamily def repo.\+Graph.\+count\+\_\+edges (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns number of edges in matrix
+:return: integer
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_a0b5384ac8bbd34c0e8bfd5fbdbd6a891}} 
+\index{repo.Graph@{repo.Graph}!count\_vertices@{count\_vertices}}
+\index{count\_vertices@{count\_vertices}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{count\_vertices()}
+{\footnotesize\ttfamily def repo.\+Graph.\+count\+\_\+vertices (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Simply returns the number of vertices in the matrix
+:return: integer
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_aa32fc5bd74ed9fe14fe7cf90c5340719}} 
+\index{repo.Graph@{repo.Graph}!delete\_cost@{delete\_cost}}
+\index{delete\_cost@{delete\_cost}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{delete\_cost()}
+{\footnotesize\ttfamily def repo.\+Graph.\+delete\+\_\+cost (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex1,  }\item[{}]{vertex2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function deletes a cost from an edge
+Checks if edge exists
+:param vertex1: integer
+:param vertex2: integer
+:return: RepositoryException if edge doesn't exist
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_af6294f73b17ce7d0e2e7b861bc65cf74}} 
+\index{repo.Graph@{repo.Graph}!delete\_edge@{delete\_edge}}
+\index{delete\_edge@{delete\_edge}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{delete\_edge()}
+{\footnotesize\ttfamily def repo.\+Graph.\+delete\+\_\+edge (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex1,  }\item[{}]{vertex2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function deletes an edge from the graph
+Checks if edge exists
+:param vertex1: integer
+:param vertex2: integer
+:return: nothing
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_a70e0a259d586ce931bdcca0872c01d84}} 
+\index{repo.Graph@{repo.Graph}!delete\_vertex@{delete\_vertex}}
+\index{delete\_vertex@{delete\_vertex}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{delete\_vertex()}
+{\footnotesize\ttfamily def repo.\+Graph.\+delete\+\_\+vertex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Deletes a vertex from the Graph
+Checks if vertex doesn't exist
+Also deletes all edges connected to said vertex
+:param vertex: integer
+:return: RepositoryException if vertex doesn't exist
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_a328ea3d2619f9a26e39f4aa6cbfc4b73}} 
+\index{repo.Graph@{repo.Graph}!file\_read\_new@{file\_read\_new}}
+\index{file\_read\_new@{file\_read\_new}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{file\_read\_new()}
+{\footnotesize\ttfamily def repo.\+Graph.\+file\+\_\+read\+\_\+new (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function reads a graph from files written by the program
+:param file: the file to read from
+:return: nothing
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_a487206bf1cd44c19c5fcee017d7d6545}} 
+\index{repo.Graph@{repo.Graph}!file\_read\_original@{file\_read\_original}}
+\index{file\_read\_original@{file\_read\_original}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{file\_read\_original()}
+{\footnotesize\ttfamily def repo.\+Graph.\+file\+\_\+read\+\_\+original (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function reads files in the original format
+:param file: the file to read from
+:return: nothing
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_ab08fc3c6cb2e70f4596abdc3bafa0fd3}} 
+\index{repo.Graph@{repo.Graph}!file\_write@{file\_write}}
+\index{file\_write@{file\_write}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{file\_write()}
+{\footnotesize\ttfamily def repo.\+Graph.\+file\+\_\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Writes Graph to file like this:
+Three values on each row, the first two represent the ends of an edge, the third is the cost
+Then if there are any remaining vertices with no edges, they are listed at the end of the file
+:param file: the file to write to
+:return: nothing
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_aec1b8e9a087e323fd1bdc3f30430ccda}} 
+\index{repo.Graph@{repo.Graph}!list\_in\_vert@{list\_in\_vert}}
+\index{list\_in\_vert@{list\_in\_vert}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{list\_in\_vert()}
+{\footnotesize\ttfamily def repo.\+Graph.\+list\+\_\+in\+\_\+vert (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns list of inbound edges of a vertex
+:param vertex: integer
+:return: a list of integers
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_a7f718f533ae80922ac609821aa127d13}} 
+\index{repo.Graph@{repo.Graph}!list\_isolated\_vert@{list\_isolated\_vert}}
+\index{list\_isolated\_vert@{list\_isolated\_vert}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{list\_isolated\_vert()}
+{\footnotesize\ttfamily def repo.\+Graph.\+list\+\_\+isolated\+\_\+vert (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a list of vertices with no inbound or outbound edges
+:return: a list of integers
+\end{DoxyVerb}
+ \mbox{\label{classrepo_1_1_graph_afb94d95cc6519bfe1e1b17b02460b371}} 
+\index{repo.Graph@{repo.Graph}!list\_out\_vert@{list\_out\_vert}}
+\index{list\_out\_vert@{list\_out\_vert}!repo.Graph@{repo.Graph}}
+\doxysubsubsection{list\_out\_vert()}
+{\footnotesize\ttfamily def repo.\+Graph.\+list\+\_\+out\+\_\+vert (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns list of outbound edges of a vertex
+:param vertex: integer
+:return: a list of integers
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Graphs\+Lab1/repo.\+py\end{DoxyCompactItemize}

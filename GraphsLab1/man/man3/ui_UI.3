@@ -1,0 +1,384 @@
+.TH "ui.UI" 3 "Thu Mar 31 2022" "GraphAssignment1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ui.UI
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, repo)"
+.br
+.ti -1c
+.RI "def \fBconsole\fP (self)"
+.br
+.ti -1c
+.RI "def \fBcount_vertices\fP (self)"
+.br
+.ti -1c
+.RI "def \fBcount_edges\fP (self)"
+.br
+.ti -1c
+.RI "def \fBadd_vertex\fP (self)"
+.br
+.ti -1c
+.RI "def \fBcheck_vertex\fP (self)"
+.br
+.ti -1c
+.RI "def \fBdel_vertex\fP (self)"
+.br
+.ti -1c
+.RI "def \fBadd_edge\fP (self)"
+.br
+.ti -1c
+.RI "def \fBcheck_edge\fP (self)"
+.br
+.ti -1c
+.RI "def \fBdel_edge\fP (self)"
+.br
+.ti -1c
+.RI "def \fBchange_cost\fP (self)"
+.br
+.ti -1c
+.RI "def \fBlist_inbound\fP (self)"
+.br
+.ti -1c
+.RI "def \fBlist_inbound_nr\fP (self, vertex)"
+.br
+.ti -1c
+.RI "def \fBlist_outbound\fP (self)"
+.br
+.ti -1c
+.RI "def \fBlist_outbound_nr\fP (self, vertex)"
+.br
+.ti -1c
+.RI "def \fBlist_degree\fP (self)"
+.br
+.ti -1c
+.RI "def \fBprint_graph\fP (self)"
+.br
+.ti -1c
+.RI "def \fBfile_io\fP (self)"
+.br
+.ti -1c
+.RI "def \fBread1k\fP (self)"
+.br
+.ti -1c
+.RI "def \fBread10k\fP (self)"
+.br
+.ti -1c
+.RI "def \fBread100k\fP (self)"
+.br
+.ti -1c
+.RI "def \fBread1k_modified\fP (self)"
+.br
+.ti -1c
+.RI "def \fBread10k_modified\fP (self)"
+.br
+.ti -1c
+.RI "def \fBread100k_modified\fP (self)"
+.br
+.ti -1c
+.RI "def \fBwrite1k\fP (self)"
+.br
+.ti -1c
+.RI "def \fBwrite10k\fP (self)"
+.br
+.ti -1c
+.RI "def \fBwrite100k\fP (self)"
+.br
+.ti -1c
+.RI "def \fBcreate_random\fP (self)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+This is the Main UI function
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def ui\&.UI\&.add_edge ( self)"
+
+.PP
+.nf
+This function adds an edge using add_edge repo function
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.add_vertex ( self)"
+
+.PP
+.nf
+Adds a vertex using add_vertex from repo
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.change_cost ( self)"
+
+.PP
+.nf
+This function modifies the cost of an edge
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.check_edge ( self)"
+
+.PP
+.nf
+This function checks existence of an edge
+:return: nothing, result is printed in console
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.check_vertex ( self)"
+
+.PP
+.nf
+This function checks existence of a vertex
+:return: nothing, and result is printed in console
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.console ( self)"
+
+.PP
+.nf
+This function lets the user choose one of the listed options
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.count_edges ( self)"
+
+.PP
+.nf
+This function returns the number of edges
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.count_vertices ( self)"
+
+.PP
+.nf
+This function prints the number of vertices
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.create_random ( self)"
+
+.PP
+.nf
+This function generates a random Graph after reading number of vertices and Edges from the console
+:return:
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.del_edge ( self)"
+
+.PP
+.nf
+This function deletes an edge
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.del_vertex ( self)"
+
+.PP
+.nf
+This function deletes a vertex
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.file_io ( self)"
+
+.PP
+.nf
+This function lets the user choose IO operations
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.list_degree ( self)"
+
+.PP
+.nf
+This function prints the inbound and outbound degrees of a vertex
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.list_inbound ( self)"
+
+.PP
+.nf
+This function prints inbound vertices of given vertex
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.list_inbound_nr ( self,  vertex)"
+
+.PP
+.nf
+This function prints the inbound degree of a vertex
+:param vertex: integer
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.list_outbound ( self)"
+
+.PP
+.nf
+This function prints outbound vertices of given vertex
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.list_outbound_nr ( self,  vertex)"
+
+.PP
+.nf
+This function prints the outbound degree of a vertex
+:param vertex: integer
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.print_graph ( self)"
+
+.PP
+.nf
+This function prints the whole graph\&. Do not use this\&.
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.read100k ( self)"
+
+.PP
+.nf
+This function reads a graph from file graph100k\&.txt
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.read100k_modified ( self)"
+
+.PP
+.nf
+This function reads a graph from file graph100knew\&.txt
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.read10k ( self)"
+
+.PP
+.nf
+This function reads a graph from file graph10k\&.txt
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.read10k_modified ( self)"
+
+.PP
+.nf
+This function reads a graph from file graph10knew\&.txt
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.read1k ( self)"
+
+.PP
+.nf
+This function reads a graph from file graph1k\&.txt
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.read1k_modified ( self)"
+
+.PP
+.nf
+This function reads a graph from file graph1knew\&.txt
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.write100k ( self)"
+
+.PP
+.nf
+This function writes the graph to graph100knew\&.txt
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.write10k ( self)"
+
+.PP
+.nf
+This function writes the graph to graph10knew\&.txt
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def ui\&.UI\&.write1k ( self)"
+
+.PP
+.nf
+This function writes the graph to graph1knew\&.txt
+:return: nothing
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GraphAssignment1 from the source code\&.

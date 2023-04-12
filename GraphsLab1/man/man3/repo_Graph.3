@@ -1,0 +1,298 @@
+.TH "repo.Graph" 3 "Thu Mar 31 2022" "GraphAssignment1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+repo.Graph
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self)"
+.br
+.ti -1c
+.RI "def \fBfile_read_original\fP (self, file)"
+.br
+.ti -1c
+.RI "def \fBfile_read_new\fP (self, file)"
+.br
+.ti -1c
+.RI "def \fBfile_write\fP (self, file)"
+.br
+.ti -1c
+.RI "def \fBcount_vertices\fP (self)"
+.br
+.ti -1c
+.RI "def \fBcount_edges\fP (self)"
+.br
+.ti -1c
+.RI "def \fBlist_isolated_vert\fP (self)"
+.br
+.ti -1c
+.RI "def \fBlist_in_vert\fP (self, vertex)"
+.br
+.ti -1c
+.RI "def \fBlist_out_vert\fP (self, vertex)"
+.br
+.ti -1c
+.RI "def \fBadd_vertex\fP (self, vertex)"
+.br
+.ti -1c
+.RI "def \fBcheck_vertex\fP (self, vertex)"
+.br
+.ti -1c
+.RI "def \fBdelete_vertex\fP (self, vertex)"
+.br
+.ti -1c
+.RI "def \fBcheck_cost\fP (self, vertex1, vertex2)"
+.br
+.ti -1c
+.RI "def \fBadd_cost\fP (self, vertex1, vertex2, cost)"
+.br
+.ti -1c
+.RI "def \fBdelete_cost\fP (self, vertex1, vertex2)"
+.br
+.ti -1c
+.RI "def \fBcheck_edge\fP (self, vertex1, vertex2)"
+.br
+.ti -1c
+.RI "def \fBadd_edge\fP (self, vertex1, vertex2)"
+.br
+.ti -1c
+.RI "def \fBdelete_edge\fP (self, vertex1, vertex2)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDin\fP"
+.br
+.ti -1c
+.RI "\fBDout\fP"
+.br
+.ti -1c
+.RI "\fBDcost\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Implementation of the Graph\&.
+Uses three dictionaries for storing values\&.
+Din and Dout have all existing vertices as keys, and a corresponding list of inbound / outbound vertices as values
+Dcost has a pairs of two vertices as keys, and integers as values
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def repo\&.Graph\&.add_cost ( self,  vertex1,  vertex2,  cost)"
+
+.PP
+.nf
+This function add a cost to an edge
+Checks if edge exists
+:param vertex1: integer
+:param vertex2: integer
+:param cost: integer
+:return: RepositoryException if edge doesn't exist
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.add_edge ( self,  vertex1,  vertex2)"
+
+.PP
+.nf
+This function adds an edge to the graph
+Checks if edge already exists
+:param vertex1: integer
+:param vertex2: integer
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.add_vertex ( self,  vertex)"
+
+.PP
+.nf
+Adds a vertex to the Graph
+Checks if vertex already exists
+:param vertex: integer
+:return: RepositoryException if vertex exists
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.check_cost ( self,  vertex1,  vertex2)"
+
+.PP
+.nf
+This function return the cost of an edge
+:param vertex1: integer
+:param vertex2: integer
+:return: integer
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.check_edge ( self,  vertex1,  vertex2)"
+
+.PP
+.nf
+This function checks if an edge exists
+:param vertex1: integer
+:param vertex2: integer
+:return: boolean
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.check_vertex ( self,  vertex)"
+
+.PP
+.nf
+Checks if vertex already exists
+:param vertex: integer
+:return: RepositoryException if vertex exists
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.count_edges ( self)"
+
+.PP
+.nf
+Returns number of edges in matrix
+:return: integer
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.count_vertices ( self)"
+
+.PP
+.nf
+Simply returns the number of vertices in the matrix
+:return: integer
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.delete_cost ( self,  vertex1,  vertex2)"
+
+.PP
+.nf
+This function deletes a cost from an edge
+Checks if edge exists
+:param vertex1: integer
+:param vertex2: integer
+:return: RepositoryException if edge doesn't exist
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.delete_edge ( self,  vertex1,  vertex2)"
+
+.PP
+.nf
+This function deletes an edge from the graph
+Checks if edge exists
+:param vertex1: integer
+:param vertex2: integer
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.delete_vertex ( self,  vertex)"
+
+.PP
+.nf
+Deletes a vertex from the Graph
+Checks if vertex doesn't exist
+Also deletes all edges connected to said vertex
+:param vertex: integer
+:return: RepositoryException if vertex doesn't exist
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.file_read_new ( self,  file)"
+
+.PP
+.nf
+This function reads a graph from files written by the program
+:param file: the file to read from
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.file_read_original ( self,  file)"
+
+.PP
+.nf
+This function reads files in the original format
+:param file: the file to read from
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.file_write ( self,  file)"
+
+.PP
+.nf
+Writes Graph to file like this:
+Three values on each row, the first two represent the ends of an edge, the third is the cost
+Then if there are any remaining vertices with no edges, they are listed at the end of the file
+:param file: the file to write to
+:return: nothing
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.list_in_vert ( self,  vertex)"
+
+.PP
+.nf
+Returns list of inbound edges of a vertex
+:param vertex: integer
+:return: a list of integers
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.list_isolated_vert ( self)"
+
+.PP
+.nf
+Returns a list of vertices with no inbound or outbound edges
+:return: a list of integers
+
+.fi
+.PP
+ 
+.SS "def repo\&.Graph\&.list_out_vert ( self,  vertex)"
+
+.PP
+.nf
+Returns list of outbound edges of a vertex
+:param vertex: integer
+:return: a list of integers
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GraphAssignment1 from the source code\&.
