@@ -1,0 +1,29 @@
+Input start vertex:0
+Input end vertex:3
+called recursive( 0 , 3 , 0 , [] )
+added  0  to visited
+checking vertex 1 after walk [0]
+called recursive( 1 , 3 , 0 , [0] )
+added  1  to visited
+checking vertex 0 after walk [0, 1]
+vertex already visited
+checking vertex 2 after walk [0, 1]
+called recursive( 2 , 3 , 1 , [0, 1] )
+added  2  to visited
+checking vertex 0 after walk [0, 1, 2]
+vertex already visited
+checking vertex 1 after walk [0, 1, 2]
+vertex already visited
+checking vertex 3 after walk [0, 1, 2]
+got to end vertex
+found new walk  [0, 1, 2, 3]  with cost 3
+checking vertex 4 after walk [0, 1, 2]
+checking vertex 3 after walk [0, 1]
+got to end vertex
+checking vertex 4 after walk [0, 1]
+checking vertex 2 after walk [0]
+checking vertex 3 after walk [0]
+got to end vertex
+checking vertex 4 after walk [0]
+Lowest cost:  3
+Lowest walk:  [0, 1, 2, 3]
